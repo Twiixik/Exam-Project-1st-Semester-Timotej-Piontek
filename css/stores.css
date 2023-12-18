@@ -1,0 +1,641 @@
+@font-face {
+    font-family: PTSans;
+    src: url(/fonts/PTSans-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: SecularOne;
+    src: url(/fonts/SecularOne-Regular.ttf);
+}
+
+/* COLORS FOR CSS */
+
+:root {
+    --RED: #9A3B3B;
+    --DARKBROWN: #C08261;
+    --LIGHTBROWN: #E2C799;
+    --YELLOWBROWN: #F2ECBE;
+    font-family: PTSans;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: SecularOne;
+    font-weight: normal;
+}
+
+/* STYLE FOR EVERYTHING */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--RED);
+}
+
+/* MENU */
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--LIGHTBROWN);
+    border-bottom: 0.5em solid var(--RED);
+    padding: 1em 0;
+}
+
+header li {
+    list-style: none;
+}
+
+.navbar{
+    width: 85vw;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+    
+    font-size: 1.5rem;
+    font-family: SecularOne;
+}
+
+.navbar .toggle_btn {
+    color: var(--RED);
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* DROPDOWN MENU */ 
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 70px;
+    height: 0;
+    width: 300px;
+    background-color: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 200px;
+
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* LOGO AND USER PROFILE ICON */
+
+.logo {
+    width: 4rem;
+    cursor: pointer;
+    filter: invert(27%) sepia(48%) saturate(726%) hue-rotate(312deg) brightness(101%) contrast(95%);
+}
+
+.userprofile {
+    width: 2rem;
+    cursor: pointer;
+}
+
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*  {
+    margin: 0;
+    padding: 0;
+}
+
+/* CATEGORIES MENU */
+
+#main-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+#filter {
+    display: flex;
+    justify-content: space-between;
+
+    width: 85vw;
+}
+
+#categories {
+    background-color: var(--DARKBROWN);
+    padding: 1.5rem;
+    width: 33%;
+    height: min-content;
+
+    border-radius: 2em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#categories-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 0.5rem;
+    border-bottom: var(--RED);
+}
+
+#categories h2 {
+    padding: 0 2rem 0.5rem 2rem;
+    border-bottom: var(--RED) solid;
+    color: var(--YELLOWBROWN);
+}
+
+#categories ul {
+    list-style: none;
+    
+}
+
+#categories li {
+
+    display: flex;
+    justify-content: center;
+
+    padding: 0.5rem;
+
+    margin-top: 0.5em;
+
+    background-color: var(--LIGHTBROWN);
+
+    border: 0;
+    border-bottom: var(--RED) solid;
+    border-right: solid var(--RED);
+    border-radius: 0.5rem;
+
+    font-family: SecularOne;
+}
+
+#categories a {
+    color: var(--RED);
+    text-decoration: none;
+}
+
+/* CARDS OF STORES */
+
+.store-card {
+    margin-bottom: 2em;
+    margin-top: 2rem;
+    width: 44vw;
+}
+
+.card-text {
+    background-color: var(--DARKBROWN);
+    padding: 1em 1em;
+
+    border-radius: 0 0 1em 1em;
+    border-top: 0.5em solid var(--RED);
+}
+
+.card-text h3 {
+    color: var(--YELLOWBROWN);
+    font-size: 2em;
+}
+
+.card-text p {
+    color: var(--YELLOWBROWN);
+    font-size: 1em;
+
+}
+
+.card-image {
+    width: 100%;
+    height: 7em;
+    overflow: hidden;
+
+    border-radius: 1em 1em 0 0;
+}
+
+.hide {
+    display: none;
+}
+
+.raiting {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: SecularOne;
+}
+
+#seemore-button {
+    display: block;
+
+    margin-left: auto;
+    margin-right: 0;
+
+    background-color: var(--LIGHTBROWN);
+
+    padding: 0 1em;
+    font-size: 1em;
+    margin-top: 1em;
+
+    border: 0;
+    border-bottom: var(--RED) solid;
+    border-right: solid var(--RED);
+    border-radius: 0.3rem;
+
+    color: var(--RED);
+    cursor: pointer;
+}
+
+/* DROPDWON MENU FOR JS */
+
+#footerlinksmobile {
+    display: flex;
+}
+
+#drop-down-toggler {
+    display: none;
+}
+
+#category-selectors {
+    display: block;
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    background-color: var(--YELLOWBROWN);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1rem solid var(--RED);
+}
+
+footer div {
+    margin-left: 2rem;
+}
+
+/* FOOTER FORM */
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.footerlabel {
+    color: var(--RED);
+    font-size: 1.2rem;
+}
+
+.footerinput {
+    background-color: var(--DARKBROWN);
+    height:2rem;
+    width: 16rem;
+    border: 1px solid var(--RED); 
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.formfootertext {
+    color: var(--RED);
+    font-size: 1.3rem;
+
+}
+
+.subscribebutton {
+    background-color: var(--LIGHTBROWN);
+    color: var(--RED);
+
+    width: min(16em, 25vw);
+    padding: 0.5rem;
+
+    border: 0;
+    border-bottom: 0.2rem solid var(--RED);
+    border-right: 0.2rem solid var(--RED);
+    border-radius: 0.5rem;
+
+    font-size: 1rem;
+    margin-top: 0.1rem;
+    
+}
+
+/* FOOTER STORES QUICK LINK */
+
+.footerheaderstores{
+    color: var(--RED);
+    font-size: 1.2rem;
+}
+
+.footerstores li {
+    color: var(--RED);
+}
+
+.footerstores{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* FOOTER SOCIAL MEDIA BUTTONS */
+
+.socialmediatext{
+    font-size: 1.1rem;
+    color: var(--RED);
+}
+
+.footersocialmedia li {
+    list-style: none;
+}
+
+.footersocialmedia {
+    width: 1rem;
+}
+
+.footersocialmedia a {
+    display: flex;
+}
+
+.copyright {
+    color: var(--RED);
+    padding-top: 1.4rem;
+    font-size: 1.2rem;
+}
+
+.figure {
+    width: 8em;
+    margin-left: 15em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* STARTING MOBILE RESPONSIVE */
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE RESPONSIVE DROP DOWN MENU !!!! */
+
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;  
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+        font-family: SecularOne;
+    }
+
+}
+
+/* STYLING FOR MAIN THINGS */
+
+@media screen and (max-width: 900px) {
+
+    /* DROPDOWN MENU FOR JS */
+
+    #drop-down-toggler {
+        display: block;
+    }
+
+
+    /* CATEGORIES FILTER */
+
+    #categories-title {
+        display: none;
+    }
+
+    #filter {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+        width: 90vw;
+    }
+
+    #categories {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 90vw;
+    }
+
+    #categories {
+        background-color: var(--DARKBROWN);
+        padding: 0.5rem 1rem;
+        width: 90%;
+        height: min-content;
+    
+        border-radius: 1em;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+    }
+    
+    #categories h2 {
+        padding: 0;
+        border: none;
+        align-items: center;
+
+        font-size: 1.5em;
+    }
+
+    #categories-title-wrapper {
+        padding-bottom: 0;
+    }
+
+    /* CARDS WITH STORES */
+
+    .store-card {
+        width: 90vw;
+        margin: .6;
+    }
+    
+    .card-text {
+        background-color: var(--DARKBROWN);
+        padding: 0.5em 0.5em;
+    
+        border-radius: 0 0 1em 1em;
+        border-top: 0.5em solid var(--RED);
+    }
+    
+    .card-text h3 {
+        color: var(--YELLOWBROWN);
+        font-size: 1.6em;
+    }
+    
+    .card-text p {
+        color: var(--YELLOWBROWN);
+        font-size: .8em;
+    
+    }
+    
+    .card-image {
+        width: 100%;
+        height: 4em;
+        overflow: hidden;
+    
+        border-radius: 1em 1em 0 0;
+    }
+
+     /* FOOTER */
+
+
+    footer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--YELLOWBROWN);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-top: 1rem solid var(--RED);
+    }
+
+    /* FOOTER FORM */
+
+    .footer-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .footerlabel {
+        color: var(--RED);
+        font-size: 1.2rem;
+    }
+
+    .footerinput {
+        background-color: var(--DARKBROWN);
+        height:2rem;
+        width: 18rem;
+        border: 1px solid var(--RED); 
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        border: none;
+    }
+
+    .formfootertext {
+        color: var(--RED);
+        font-size: 1.3rem;
+    }
+
+    .subscribebutton {
+        background-color: var(--LIGHTBROWN);
+        color: var(--RED);
+    
+        width: min(25em, 70vw);
+        padding: 0.5rem;
+    
+        border: 0;
+        border-bottom: 0.2rem solid var(--RED);
+        border-right: 0.2rem solid var(--RED);
+        border-radius: 0.5rem;
+    
+        font-size: 1rem;
+        margin-top: 0.1rem;
+        
+    }
+
+    /* FOOTER STORES QUICK LINK */
+
+    .footerheaderstores{
+        color: var(--RED);
+        font-size: 1.2rem;
+    }
+
+    .footerstores li {
+        color: var(--RED);
+    }
+
+    .footerstores{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* FOOTER SOCIAL MEDIA BUTTONS */
+
+    .socialmediatext{
+        font-size: 1.1rem;
+        color: var(--RED);
+    }
+
+    .footersocialmedia li {
+        list-style: none;
+    }
+
+    .footersocialmedia {
+        width: 1rem;
+    }
+
+    .copyright {
+        color: var(--RED);
+        padding-top: 1.4rem;
+        font-size: 1rem;
+    }
+
+    #footerlinksmobile {
+        display: flex;
+    }
+
+    #footerlinksmobile {
+        padding-top: 2rem;
+    }
+
+    .figure {
+        display: none;
+    }
+
+
+        
+}
+    
+
+
